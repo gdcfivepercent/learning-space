@@ -34,7 +34,9 @@ int getchoice(char *greet, char *choices[])
             printf("%s\n", *option);
             option++;
         }
-        selected = getchar();
+        do {
+            selected = getchar();
+        } while (selected == '\n');
         option = choices;
         while (*option) {
             if (selected == *option[0]) {
