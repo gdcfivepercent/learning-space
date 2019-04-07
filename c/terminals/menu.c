@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +13,12 @@ int getchoice(char *greet, char *choices[]);
 
 int main(void)
 {
-    int choice;
+    int choice = 0;
+
+    if (!isatty(fileno(stdout))) {
+        fprintf(stderr, "You are not a terminal!\n");
+        exit(EXIT_FAILURE);
+    }
 
     do {
         choice = getchoice("Choose one", choices);
