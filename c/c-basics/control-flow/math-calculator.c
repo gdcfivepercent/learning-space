@@ -12,14 +12,19 @@ int main(void)
     switch (op) {
         case '+':
             printf("%d + %d = %d\n", a, b, a+b);
+            break;
         case '-':
             printf("%d - %d = %d\n", a, b, a-b);
+            break;
         case '*':
             printf("%d * %d = %d\n", a, b, a*b);
+            break;
         case '/':
             printf("%d / %d = %d\n", a, b, a/b);
+            break;
         default:
             printf("Not supported!\n");
+            break;
     }
 
     return 0;
