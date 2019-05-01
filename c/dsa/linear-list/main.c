@@ -38,7 +38,7 @@ main(void)
     // 函数指针的用法
     ListTraverse(L, &PrintElmt);
 
-    // DestroyList(L_ptr);
+    DestroyList(&L);
 
     return 0;
 }
