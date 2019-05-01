@@ -18,7 +18,7 @@ typedef struct {
 
 void InitList(List *L_ptr);
 void DestroyList(List *L_ptr);
-// void ClearList(List *L_ptr);
+void ClearList(List *L_ptr);
 int ListEmpty(List L);
 int ListLength(List L);
 int ListInsert(List *L_ptr, int i, Elmt e);

@@ -15,6 +15,11 @@ void DestroyList(List *L_ptr)
     free(L_ptr->head);
 }
 
+void ClearList(List *L_ptr)
+{
+    L_ptr->length = 0;
+}
+
 int ListEmpty(List L)
 {
     if (L.length == 0) {
